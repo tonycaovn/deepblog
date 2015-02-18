@@ -1,0 +1,12 @@
+<div class="blog-list-page">
+  <% @posts.each do |post| %>
+  <div class="post-item">
+    <div class="post-title">
+      <%= link_to post.title, post %>
+    </div>
+    <div class="post-content">
+      <%= simple_format(post.content) %>
+    </div>
+  </div>
+  <% end %>
+</div>
