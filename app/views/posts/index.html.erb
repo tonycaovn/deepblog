@@ -4,8 +4,11 @@
     <div class="post-title">
       <%= link_to post.title, post %>
     </div>
+    <div class="post-date">
+        <%= post.created_at.strftime("%A, %B %d, %Y") %>
+    </div>
     <div class="post-content">
-      <%= simple_format(post.content) %>
+      <%=raw post.content.gsub(/\n/, '<br/>') %>
     </div>
   </div>
   <% end %>

@@ -1,8 +1,22 @@
 .blog{
+    @include max-screen(767px){
+        width:100%;
+    }
+    @include screen(768px,991px){
+        width:60%;
+    }
+    @include screen(992px,1199px){
+        width:60%;
+    }
+    @include min-screen(1200px){
+        width:60%;
+    }
+    margin-left:auto;
+    margin-right:auto;
     .header{
         text-align:center;
         border-bottom:1px solid #ddd;
-        padding-bottom:15px;
+        padding-bottom:15px;        
         a{
             color:black;
             text-decoration:none;
@@ -13,7 +27,7 @@
             display:inline-block;
         }
         .title{
-            font-size:28px;
+            font-size:$headerFont;
             display:inline-block;
             height:80px;
             line-height:80px;
