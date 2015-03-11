@@ -1,6 +1,6 @@
 class TagpostsController < ApplicationController
   before_filter :get_post
-
+  before_filter :authenticate_user
   def get_post
     @post = Post.find(params[:post_id])
   end

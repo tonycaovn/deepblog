@@ -1,0 +1,21 @@
+<div class="loginPage">
+    <h1>Login</h1>
+    <% if flash[:danger] -%>
+      <p class='error'><%=h flash[:danger] %></p>
+    <% end -%>
+    <%= form_for(:session, url: login_path, :html => {:id => "loginForm", :class => "loginForm"}) do |f| %>
+        <div class="input-row">
+            <%= f.label :email %><br/>
+            <%= f.email_field :email, class: 'form-control' %>
+        </div>
+        <div class="input-row">
+            <%= f.label :password %><br/>
+            <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class="input-row">
+            <center><%= f.submit "Log in", class: "btn btn-primary" %></center>
+        </div>
+    <% end %>
+
+
+</div>
