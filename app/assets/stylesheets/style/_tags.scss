@@ -1,0 +1,38 @@
+.tags{
+    margin: 0px;
+    padding: 0px;
+    .tag{
+        list-style:none;
+        display: inline-block;
+        vertical-align: top;
+        padding:3px;
+        @include border-radius(5px);
+        &.orange{
+            background-color:$orangeTagColor;
+        }
+        &.red{
+            background-color:$redTagColor;
+            color: white;
+        }
+        &.gray{
+            background-color:$grayTagColor;
+            color: #333;
+        }
+        &.pink{
+            background-color:$pinkTagColor;
+            color: white;
+        }
+        &.gray{
+            background-color:$grayTagColor;
+            color: #333;
+        }
+        &.blue{
+            background-color:$blueTagColor;
+            color: white;            
+        }
+        &.green{
+            background-color:$greenTagColor;
+            color: white;            
+        }
+    }    
+}

@@ -8,14 +8,19 @@
         padding-bottom:15px;
         margin-top:15px;
         font-size:$contentFont;
+        font-family: $contentFontFamilyList;
         .post-title{
             font-size:$titleFont;
+            font-weight: 700;
+            line-height: 1.2;
             a{
                 color:black;
                 text-decoration:none;
-            }
-            a:hover{
-                color:#ea1e30;
+                width: 100%;
+                display: inline-block;
+                &:hover{
+                    color:$purpleTagColor;
+                }
             }
         }
         .post-date{
@@ -23,9 +28,34 @@
             margin-bottom:3px;
             color:$postDateColor;
             font-size: 14px;
+            &.centerize{
+                text-align:center;
+                font-size:$contentFont;
+            }
         }
+
         .post-content{
-            color:$postContentColor;
+            color: rgba(0,0,0,0.6);
+            font-size: $contentFont;
+            line-height: 1.5;
+            font-family: $contentFontFamilyList;
+            img{
+                margin-left:auto;
+                margin-right:auto;
+                display:block;
+            }
         }
+    }
+}
+
+.new_post,.edit_post{
+    font-size:$inputFontSize;
+    .post-title-input{
+        font-size:$inputFontSize;
+    }
+    .post-content-input{
+        font-size:$inputFontSize;
+        width:100%;
+        height:300px;
     }
 }

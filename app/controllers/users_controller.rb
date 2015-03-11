@@ -25,7 +25,6 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -33,6 +32,22 @@ class UsersController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def addTag
+    @tagPost = @post.tagPosts.new(params[:tagPost])
+    respond_to do |format|
+      if @tagPost.save
+        format.html { redirect_to [@post, @tagPost], notice: 'Tweet was successfully created.'}
+        format.json { render json: [@post, @tagPost],
+          status: :created,
+          location: [@post, @tagPost]
+        }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @tweet.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -71,4 +86,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password, :token)
     end
-end
+  end

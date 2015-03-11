@@ -9,8 +9,13 @@
 <body class="blog">
     <div class="header">
         <%= link_to image_tag("avatar.jpg", class: "avatar", alt: "My Avatar"), root_url %>
-        <div class="title">
-            <%= link_to "Cao Tấn Thành's Blog", root_url %>
+        <div class="introduce">
+          <div class="title">
+              <%= link_to "Cao Tấn Thành's Blog", root_url %>
+          </div>
+          <div class="position">
+              Front End Expert at Big Labs Corporation
+          </div>
         </div>
     </div>
     <%= yield %>

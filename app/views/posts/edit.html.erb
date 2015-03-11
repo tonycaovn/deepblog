@@ -2,5 +2,21 @@
 
 <%= render 'form' %>
 
+<h1>Add Tag</h1>
+<ul id="tagList">
+    <% @tags.each do |tag| %>
+        <li><%= tag.name %></li>
+    <% end %>
+</ul>
+<form id="tagPostForm" action="/posts/<%= @post.id %>/tagposts" method="post">
+  <select id="tag_id" name="tag_id">
+    <% @availableTags.each do |tag| %>
+      <option value="<%= tag.id %>"><%= tag.name %></option>
+    <% end %>
+  </select>
+  <input  type="hidden" id="post_id"  name="post_id" value="<%= @post.id %>" />
+  <button id="add-tag">Add</button>
+</form>
+
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>

@@ -2,10 +2,17 @@ Rails.application.routes.draw do
   root 'posts#index'
   resources :tags
 
-  resources :posts
+  resources :posts do
+    resources :tagposts , controller: 'tagposts'
+  end
 
   resources :users
 
+  constraints subdomain: 'api' do
+    namespace :api do
+      resources :posts
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

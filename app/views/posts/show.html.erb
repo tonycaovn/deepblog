@@ -1,16 +1,15 @@
 <p id="notice"><%= notice %></p>
 <div class="blog-list-page">
   <div class="post-item">
-    <div class="post-title">
-      <%= link_to @post.title, @post %>
+    <div class="post-date centerize">
+        <%= @post.created_at.strftime("%B %d, %Y") %>
     </div>
-    <div class="post-date">
-        <%= @post.created_at.strftime("%A, %B %d, %Y") %>
+    <div class="post-title">
+      <%= link_to @post.title, @post,:class => "slabText" %>
     </div>
     <div class="post-content">
       <%=raw @post.content.gsub(/\n/, '<br/>') %>
     </div>
-    <%= link_to 'Back', posts_path %>
   </div>
 </div>
 
