@@ -2,7 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .blog-list-page{
-    background-color:white;
+    .post-summarize{
+        margin-bottom:15px;
+        font-family: $contentFontFamilyList;
+        .post-date{
+            color:$postDateColor;
+            font-size: $dateFontSize;
+            &.centerize{
+                text-align:center;
+            }
+        }
+        .post-title{
+            font-size:28px;
+            a{
+                color:$blackTitleColor;
+                text-decoration:none;
+                width: 100%;
+                display: inline-block;
+                &:hover{
+                    color:$blackTitleColor;
+                }
+            }
+        }
+    }
     .post-item{
         border-bottom:1px solid #ddd;
         padding-bottom:15px;
@@ -11,15 +33,15 @@
         font-family: $contentFontFamilyList;
         .post-title{
             font-size:$titleFont;
-            font-weight: 700;
             line-height: 1.2;
+            text-align: center;
             a{
-                color:black;
+                color:$blackTitleColor;
                 text-decoration:none;
                 width: 100%;
                 display: inline-block;
                 &:hover{
-                    color:$purpleTagColor;
+                    color:$blackTitleColor;
                 }
             }
         }
@@ -27,10 +49,9 @@
             margin-top:3px;
             margin-bottom:3px;
             color:$postDateColor;
-            font-size: 14px;
+            font-size: $contentFont;
             &.centerize{
                 text-align:center;
-                font-size:$contentFont;
             }
         }
 

@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="blog">
-    <div class="header">
+    <header>
+      <!--
         <%= link_to image_tag("avatar.jpg", class: "avatar", alt: "My Avatar"), root_url %>
+      -->
+        <%= link_to "", root_url, class: "avatar" %>
         <div class="introduce">
           <div class="title">
               <%= link_to "Cao Tấn Thành's Blog", root_url %>
@@ -17,7 +20,10 @@
               Front End Expert at Big Labs Corporation
           </div>
         </div>
-    </div>
+    </header>
     <%= yield %>
+    <footer>
+      This document created by tonycaovn@gmail.com
+    </footer>
 </body>
 </html>
