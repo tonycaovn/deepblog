@@ -12,7 +12,7 @@
 # https://gist.github.com/razor-x/8288761
 #
 'use strict'
-ready = ->
+loadGist = ->
   GIST_HOST = 'https://gist.github.com'
   elements = $('div[data-gist]')
   gists = {}
@@ -72,5 +72,5 @@ ready = ->
           $(this).replaceWith(outer)
           outer.fadeIn()
 
-$(document).ready(ready)
-$(document).on('page:load', ready)
+$(document).ready(loadGist)
+$(document).on('page:load', loadGist)

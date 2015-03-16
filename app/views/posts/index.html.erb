@@ -7,6 +7,11 @@
     <div class="post-title">
       <%= link_to post.title, post %>
     </div>
+    <ul class="tags">
+      <% post.tags.each do |tag| %>
+        <li class="tag <%= tag.color %>"><%= tag.name %></li>
+      <% end %>
+    </ul>
   </div>
   <% end %>
 </div>

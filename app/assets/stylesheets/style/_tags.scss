@@ -5,8 +5,11 @@
         list-style:none;
         display: inline-block;
         vertical-align: top;
-        padding:3px;
+        padding:3px 5px;
         @include border-radius(5px);
+        background-color:$grayTagColor;
+        color:black;
+        font-size: $tagFontSize;
         &.orange{
             background-color:$orangeTagColor;
         }
@@ -32,6 +35,10 @@
         }
         &.green{
             background-color:$greenTagColor;
+            color: white;            
+        }
+        &.yellow{
+            background-color:$yellowTagColor;
             color: white;            
         }
     }    

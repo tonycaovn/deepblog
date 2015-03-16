@@ -10,5 +10,10 @@
     <div class="post-content">
       <%=raw @post.content.gsub(/\n/, '<br/>') %>
     </div>
+    <ul class="tags">
+      <% @post.tags.each do |tag| %>
+        <li class="tag <%= tag.color %>"><%= tag.name %></li>
+      <% end %>
+    </ul>
   </div>
 </div>

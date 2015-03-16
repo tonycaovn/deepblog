@@ -1,6 +1,11 @@
 .blog{
+    margin-left:auto;
+    margin-right:auto;
     @include max-screen(767px){
         width:100%;
+        padding-left:10px;
+        padding-right:10px;
+        box-sizing: border-box;
     }
     @include screen(768px,991px){
         width:60%;
@@ -11,8 +16,6 @@
     @include min-screen(1200px){
         width:60%;
     }
-    margin-left:auto;
-    margin-right:auto;
     header{
         text-align:center;
         padding-bottom:15px;        
@@ -38,8 +41,19 @@
         }
         .introduce{
             display:inline-block;
-            text-align: left;
             vertical-align: top;
+            @include max-screen(767px){
+                text-align:center;
+            }
+            @include screen(768px,991px){
+                text-align:center;
+            }
+            @include screen(992px,1199px){
+                text-align: left;
+            }
+            @include min-screen(1200px){
+                text-align: left;
+            }
             .title{
                 font-size:$headerFont;
                 vertical-align: top;
