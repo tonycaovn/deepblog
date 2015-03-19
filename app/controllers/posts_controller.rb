@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @tags = @post.tags
-    @availableTags = Tag.all
+    @availableTags = Tag.all.where("id not IN (select tags.id from tags join tag_posts where tags.id = tag_posts.tag_id and tag_posts.post_id = #{@post.id})")
   end
 
   # POST /posts
