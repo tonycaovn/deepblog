@@ -64,8 +64,10 @@ loadGist = ->
             + $(gist.files.get(gist.data.files.indexOf(file))).html() \
             + "</div>"
           outer.html inner
+          outer.find(".gist-meta").remove()
         else
           outer = $(div)
+          outer.find(".gist-meta").remove()
  
         outer.hide()
         target.fadeOut 'fast', ->

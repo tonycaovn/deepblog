@@ -61,6 +61,10 @@
             font-size: $contentFont;
             line-height: 1.5;
             font-family: $contentFontFamilyList;
+            a{
+                color:$redTagColor;
+                text-decoration:none;
+            }
             img{
                 margin-left:auto;
                 margin-right:auto;

@@ -31,7 +31,7 @@ $tagColorList: "orange" $orangeTagColor white,
     padding: 0px;
     .tag{
         @include tagStyle(3px 5px,top,5px);
-    }    
+    }
 }
 
 tag{
