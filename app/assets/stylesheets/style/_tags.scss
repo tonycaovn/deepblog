@@ -1,45 +1,39 @@
+$tagColorList: "orange" $orangeTagColor white, 
+"red" $redTagColor white, 
+"gray" $grayTagColor #333, 
+"pink" $pinkTagColor white, 
+"grey" $grayTagColor #333,
+"blue" $blueTagColor white,
+"green" $greenTagColor white,
+"yellow" $yellowTagColor white,
+"black" $blackTagColor white;
+@mixin tagStyle($padding,$position,$radius){
+    list-style:none;
+    display: inline-block;
+    vertical-align: $position;
+    padding:$padding;
+    @include border-radius($radius);
+    background-color:$grayTagColor;
+    color:black;
+    font-size: $tagFontSize;
+    @each $tag in $tagColorList{
+        $key: nth($tag, 1);
+        $backgroundColor: nth($tag, 2);
+        $textColor: nth($tag, 3);
+        &.#{$key}{
+            background-color:$backgroundColor;
+            color: $textColor;
+        }
+    }
+}
 .tags{
     margin: 0px;
     padding: 0px;
     .tag{
-        list-style:none;
-        display: inline-block;
-        vertical-align: top;
-        padding:3px 5px;
-        @include border-radius(5px);
-        background-color:$grayTagColor;
-        color:black;
-        font-size: $tagFontSize;
-        &.orange{
-            background-color:$orangeTagColor;
-        }
-        &.red{
-            background-color:$redTagColor;
-            color: white;
-        }
-        &.gray{
-            background-color:$grayTagColor;
-            color: #333;
-        }
-        &.pink{
-            background-color:$pinkTagColor;
-            color: white;
-        }
-        &.gray{
-            background-color:$grayTagColor;
-            color: #333;
-        }
-        &.blue{
-            background-color:$blueTagColor;
-            color: white;            
-        }
-        &.green{
-            background-color:$greenTagColor;
-            color: white;            
-        }
-        &.yellow{
-            background-color:$yellowTagColor;
-            color: white;            
-        }
+        @include tagStyle(3px 5px,top,5px);
     }    
+}
+
+tag{
+    @include tagStyle(1px 5px,middle,4px);
 }

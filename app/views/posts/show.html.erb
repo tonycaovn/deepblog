@@ -2,7 +2,6 @@
  <meta property="og:site_name" content="Cao Tan Thanh's Blog"/>
  <meta property="og:title" content="<%= @post.title.gsub(/"/, '') %>"/>
  <meta property="og:type" content="cttblog:post"/>
- <meta property="og:image" content="http://caotanthanh.info<%= asset_path('avatar.jpg') %>"/>
  <meta property="og:description" content='<%= @post.content.truncate(200).gsub(/"/, '').squish %>' />
 <% end %>
 <p id="notice"><%= notice %></p>
