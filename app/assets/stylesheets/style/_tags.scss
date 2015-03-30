@@ -35,5 +35,6 @@ $tagColorList: "orange" $orangeTagColor white,
 }
 
 tag{
-    @include tagStyle(1px 5px,middle,4px);
+    @include tagStyle(0px 5px,middle,4px);
+    font-size:$contentFont - 7px;
 }
