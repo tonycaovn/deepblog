@@ -16,6 +16,7 @@ $tagColorList: "orange" $orangeTagColor white,
     background-color:$grayTagColor;
     color:black;
     font-size: $tagFontSize;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
     @each $tag in $tagColorList{
         $key: nth($tag, 1);
         $backgroundColor: nth($tag, 2);
